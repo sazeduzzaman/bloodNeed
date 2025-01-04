@@ -1,13 +1,13 @@
 /*
-Theme Name: Blad Ai - Blood Donation HTML5 Template
+Theme Name: Blood Boonds - Blood Donation HTML5 Template
 Author: SparkRaxx
 Author URI: https://themeforest.net/user/sparkraxx/portfolio
 Tags: 
-Description: Cartmate - Blad Ai - Blood Donation HTML5 Template
+Description: Cartmate - Blood Boonds - Blood Donation HTML5 Template
 Version: 1.0.0
 */
 /********** base css ***********/
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary-color: #ea062b;
@@ -18,7 +18,7 @@ Version: 1.0.0
   --gray2: #f1f1f1;
   --yellow: #ffc92e;
   --transition: all 0.3s ease-in;
-  --font: "Jost", sans-serif;
+  --font: "Inter", sans-serif;
   --p-color: #666666;
   --border-color: #cacaca;
   --shadow: 0px 0px 20px #0000002b;
@@ -1384,7 +1384,7 @@ header .header_top .header_top_content a {
   gap: 6px;
   font-weight: 500;
   font-size: 16px;
-  padding: 38px 0;
+  padding: 20px 0;
   -webkit-transition: var(--transition_base);
   -o-transition: var(--transition_base);
   transition: var(--transition_base);
@@ -1397,7 +1397,7 @@ header .header_top .header_top_content a {
 
 .header_bottom .main_menu li > ul {
   position: absolute;
-  left: 0;
+  left: -160px;
   top: 103%;
   z-index: -1;
   background: var(--white);
@@ -2539,7 +2539,7 @@ footer .footer_bottom p {
 }
 
 .breadcrumb_section {
-  background: url("../images/b.jpg") no-repeat;
+  background: url("../images/new-img/blood-volunteer.jpeg") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -6201,11 +6201,11 @@ footer .footer_bottom p {
 .nice-select {
   width: 100%;
   float: none;
-  height: 50px;
+  height: 45px;
 }
 
 .nice-select .current {
-  padding-top: 7px;
+  padding-top: 4px;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 16px;
@@ -6220,4 +6220,161 @@ footer .footer_bottom p {
 
 .nice-select:focus {
   border: 1px solid var(--primary-color);
+}
+/* Custom Check Box */
+.register-checkbox input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.register-checkbox .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.register-checkbox .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.register-checkbox .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+.register-checkbox .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.register-checkbox .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ea062b;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.register-checkbox .cbx span:last-child {
+  padding-left: 8px;
+}
+.register-checkbox .cbx:hover span:first-child {
+  border-color: #ea062b;
+}
+
+.register-checkbox .inp-cbx:checked + .cbx span:first-child {
+  background: #ea062b;
+  border-color: #ea062b;
+  animation: wave-46 0.4s ease;
+}
+.register-checkbox .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.register-checkbox .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.inp-cbx {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.register-checkbox .cbx {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.register-checkbox .cbx span:first-child {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ea062b;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.register-checkbox .cbx span:first-child svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  fill: #ea062b;
+  transition: transform 0.3s ease;
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+  background-color: #ea062b;
+  border-color: #ea062b;
+}
+
+.inp-cbx:checked + .cbx span:first-child svg {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* Custom Check Box End */
+.cst-input {
+  border-radius: 5px;
+  height: 45px;
+  border: 1px solid #e8e8e8;
+}
+::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: red;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: rgb(234 6 43);
+  outline: 0px;
+  box-shadow: rgba(13, 110, 253, 0.25) 0px 0px 0px 0.25rem;
+}
+/* Login Start */
+.account-page .account-page-bg {
+  background-image: url(../images/blood-donation-login.jpg);
+  background-size: cover;
+  background-position: center center;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Login End */
+.lock-icons {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
