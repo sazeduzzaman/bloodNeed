@@ -6366,10 +6366,12 @@ footer .footer_bottom p {
 }
 /* Login Start */
 .account-page .account-page-bg {
-  background-image: url(../images/blood-donation-login.jpg);
-  background-size: cover;
+  background-image: url(../images/blood-donation-login.png);
+  background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
   min-height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
